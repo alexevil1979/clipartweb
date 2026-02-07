@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-0;
+  }
+
+  body {
+    @apply bg-base text-text;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-mantle;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-1 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-surface-2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue text-base font-medium rounded-lg
+           hover:bg-blue/90 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-blue/50
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-surface-0 text-text font-medium rounded-lg
+           hover:bg-surface-1 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-surface-1/50
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-red/20 text-red font-medium rounded-lg
+           hover:bg-red/30 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-red/50;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 text-subtext-0 font-medium rounded-lg
+           hover:bg-surface-0 hover:text-text transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-mantle border border-surface-0 rounded-lg
+           text-text placeholder:text-overlay-0
+           focus:outline-none focus:ring-2 focus:ring-blue/50 focus:border-blue
+           transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-mantle border border-surface-0 rounded-xl p-6;
+  }
+
+  .glass-card {
+    @apply bg-mantle/80 backdrop-blur-lg border border-surface-0/50 rounded-xl;
+  }
+}

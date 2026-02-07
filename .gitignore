@@ -1,0 +1,39 @@
+# Dependencies
+backend/vendor/
+frontend/node_modules/
+
+# Environment
+backend/.env
+.env
+
+# Build
+frontend/dist/
+
+# Storage (runtime data)
+storage/videos/
+storage/renders/
+storage/overlays/
+storage/fonts/
+queue/*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHP
+backend/storage/logs/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*
+
+# Temp
+*.tmp
+*.bak
